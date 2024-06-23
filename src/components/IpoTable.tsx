@@ -66,16 +66,14 @@ const IpoTable = ({ tableData }: any) => (
                 </p>
               </td>
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
-                <p className="text-gray-900 whitespace-no-wrap">
-                  <div className="ml-3">
-                    <p className="text-gray-900 whitespace-no-wrap font-semibold">
-                      ₹50,000 *
-                    </p>
-                    <p className="text-gray-400 whitespace-no-wrap">
-                      100 Shares/ 5 Lots *
-                    </p>
-                  </div>
-                </p>
+                <span className="text-gray-900 whitespace-no-wrap ml-3">
+                  <p className="text-gray-900 whitespace-no-wrap font-semibold">
+                    ₹50,000 *
+                  </p>
+                  <p className="text-gray-400 whitespace-no-wrap">
+                    100 Shares/ 5 Lots *
+                  </p>
+                </span>
               </td>
             </tr>
           ))}
