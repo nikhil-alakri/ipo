@@ -1,11 +1,17 @@
+import { FOOTER_CONTENT } from "@/data";
+import Link from "next/link";
+
 const Footer = () => (
-  <footer className="bg-stone-50">
-    <div className="container mx-auto px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24">
+  <footer className="bg-stone-50" id="footer">
+    <div className="container px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
-          <div className="flex justify-center text-slate-600 sm:justify-start">
+          <Link
+            href="#home"
+            className="flex justify-center text-slate-600 sm:justify-start"
+          >
             IPO List
-          </div>
+          </Link>
 
           <p className="max-w-md mx-auto mt-6 leading-relaxed text-center text-zinc-600 sm:max-w-xs sm:mx-0 sm:text-left">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
@@ -14,7 +20,7 @@ const Footer = () => (
 
           <ul className="flex justify-center gap-6 mt-8 md:gap-8 sm:justify-start">
             <li>
-              <a
+              <Link
                 href="/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -22,11 +28,11 @@ const Footer = () => (
               >
                 <span className="sr-only">Facebook</span>
                 FB
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -34,11 +40,11 @@ const Footer = () => (
               >
                 <span className="sr-only">Instagram</span>
                 Insta
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -46,136 +52,34 @@ const Footer = () => (
               >
                 <span className="sr-only">Twitter</span>
                 Twitter
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
-          <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-zinc-900">About Us</p>
+          {FOOTER_CONTENT.map((item: any) => (
+            <div key={item.title} className="text-center sm:text-left">
+              <p className="text-lg font-medium text-zinc-900">
+                {item.heading}
+              </p>
 
-            <nav className="mt-8">
-              <ul className="space-y-4 text-sm">
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Company History
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Meet the Team
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Employee Handbook
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Careers
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-zinc-900">Our Services</p>
-
-            <nav className="mt-8">
-              <ul className="space-y-4 text-sm">
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Web Development
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Web Design
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Marketing
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Google Ads
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-zinc-900">Helpful Links</p>
-
-            <nav className="mt-8">
-              <ul className="space-y-4 text-sm">
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    FAQs
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-zinc-900 transition hover:text-zinc-900/75"
-                    href="/"
-                  >
-                    Support
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="flex group justify-center sm:justify-start gap-1.5"
-                    href="/"
-                  >
-                    <span className="text-zinc-900 transition group-hover:text-zinc-900/75">
-                      Live Chat
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              <nav className="mt-8">
+                <ul className="space-y-4 text-sm">
+                  {item.content.map((val: any) => (
+                    <li key={val.title}>
+                      <Link
+                        className="text-zinc-900 transition hover:text-zinc-900/75"
+                        href={val.path}
+                      >
+                        {val.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          ))}
 
           <div className="text-center sm:text-left">
             <p className="text-lg font-medium text-zinc-900">Contact Us</p>

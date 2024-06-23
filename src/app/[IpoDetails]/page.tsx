@@ -66,12 +66,12 @@ export default async function IpoDetail({
                 />
               </div>
               <div className="ml-3">
-                <Link
-                  href={`/${ipoDetails.searchId}`}
+                <span
+                  // href={`/${ipoDetails.searchId}`}
                   className="text-gray-900 whitespace-no-wrap font-medium lg:font-semibold"
                 >
                   {ipoDetails.growwShortName}
-                </Link>
+                </span>
                 <p className="text-gray-400 whitespace-no-wrap text-sm lg:text-lg">
                   {ipoDetails.companyName}
                 </p>

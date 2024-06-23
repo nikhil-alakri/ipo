@@ -11019,3 +11019,40 @@ export const TIMELINE = [
   { title: "Demat transfer", date: "22 Dec 2024" },
   { title: "Listing date", date: "25 Dec 2024" },
 ];
+
+export const UPCOMMING_FOOTER_CONTENT = [
+  { title: "Vraj Iron", path: "/vraj-iron-ipo" },
+  { title: "FabIndia", path: "/fabindia-ipo" },
+  { title: "Ola Electric", path: "/ola-electric-ipo" },
+  { title: "OYO", path: "/oyo-ipo" },
+];
+
+export const FOOTER_CONTENT = [
+  {
+    heading: "Upcomming IPOs",
+    content: [
+      { title: "Vraj Iron", path: "/vraj-iron-ipo" },
+      { title: "FabIndia", path: "/fabindia-ipo" },
+      { title: "Ola Electric", path: "/ola-electric-ipo" },
+      { title: "OYO", path: "/oyo-ipo" },
+    ],
+  },
+  {
+    heading: "Current IPOs",
+    content: [
+      { title: "Winny Immigration", path: "/winny-immigration-ipo" },
+      { title: "Medicamen", path: "/medicamen-organics-ipo" },
+      { title: "Stanley Lifestyles", path: "/stanley-lifestyles-ipo" },
+      { title: "Shivalic Power Control", path: "/shivalic-power-control-ipo" },
+    ],
+  },
+  {
+    heading: "Past IPOs",
+    content: [
+      { title: "GP Eco Solutions", path: "/gp-eco-ipo" },
+      { title: "Dee Development", path: "/dee-development-ipo" },
+      { title: "Durlax Top", path: "/durlax-top-ipo" },
+      { title: "Falcon", path: "/falcon-ipo" },
+    ],
+  },
+];

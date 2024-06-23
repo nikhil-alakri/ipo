@@ -26,7 +26,9 @@ export default async function Home() {
   return (
     <main>
       <div className="container mx-auto p-4 lg:px-8">
-        <h1 className="text-lg">Current IPOs</h1>
+        <h1 className="text-lg" id="current-ipos">
+          Current IPOs
+        </h1>
         <IpoTable
           tableData={{
             columns: [
@@ -38,7 +40,9 @@ export default async function Home() {
             rows: data.currentData,
           }}
         />
-        <h1 className="text-lg">Upcoming IPOs</h1>
+        <h1 className="text-lg" id="upcomming-ipos">
+          Upcoming IPOs
+        </h1>
         <IpoTable
           tableData={{
             columns: [
@@ -50,7 +54,9 @@ export default async function Home() {
             rows: data.upcomingData,
           }}
         />
-        <h1 className="text-lg">Past IPOs</h1>
+        <h1 className="text-lg" id="past-ipos">
+          Past IPOs
+        </h1>
         <IpoTable
           tableData={{
             columns: [
