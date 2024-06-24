@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import { formatDate } from "@/utils";
 import { TIMELINE } from "@/data";
 
-export async function IpoDetailData(slug: string) {
+async function IpoDetailData(slug: string) {
   const BASE_URL = process.env.GROWW_API_URL;
 
   const growwRes = await fetch(
