@@ -41,7 +41,7 @@ const IpoTable = ({ tableData }: any) => (
                   </div>
                   <div className="ml-3">
                     <Link
-                      href={`/${item.searchId}`}
+                      href={`details/${item.searchId}`}
                       className="text-gray-900 whitespace-no-wrap font-semibold"
                     >
                       {item.growwShortName}
